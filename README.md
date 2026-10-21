@@ -36,7 +36,7 @@ More information is available on Bright’s:
 - [Website](https://www.brightsec.com/)
 - [Knowledge base](https://docs.brightsec.com/docs/quickstart)
 - [YouTube channel](https://www.youtube.com/channel/UCoIC0T1pmozq3eKLsUR2uUw)
-- [GitHub Actions](https://github.com/marketplace?query=neuralegion+)
+- [GitHub Actions](https://github.com/marketplace?query=brightsec+)
 
 # Inputs
 
@@ -98,7 +98,7 @@ start_and_wait_scan:
   steps:
     - name: Start Bright Scan 🏁
       id: start
-      uses: NeuraLegion/run-scan@v1
+      uses: BrightSec/run-scan@v1
       with:
         api_token: ${{ secrets.BRIGHTSEC_TOKEN }}
         name: GitHub scan ${{ github.sha }}
@@ -114,7 +114,7 @@ start_and_wait_scan:
       run: echo "The scan was started on ${{ steps.start.outputs.url }}"
     - name: Wait for any issues ⏳
       id: wait
-      uses: NeuraLegion/wait-for@v1
+      uses: BrightSec/wait-for@v1
       with:
         api_token: ${{ secrets.BRIGHTSEC_TOKEN }}
         scan: ${{ steps.start.outputs.id }}
