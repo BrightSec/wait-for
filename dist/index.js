@@ -211,7 +211,7 @@ const uploadSarif = (params) => __awaiter(void 0, void 0, void 0, function* () {
         sarif,
         ref: params.ref,
         commit_sha: params.commitSha,
-        tool_name: 'NeuraLegion’s DAST',
+        tool_name: 'BrightSec’s DAST',
         checkout_uri: (0, url_1.pathToFileURL)(process.cwd()).toString()
     }, {
         headers: {
